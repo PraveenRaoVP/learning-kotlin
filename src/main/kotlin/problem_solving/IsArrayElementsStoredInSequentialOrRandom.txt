@@ -1,0 +1,10 @@
+Elements in an array are stored in sequential or contiguous memory locations.
+
+Eg. arr[] = {1,2,3,4,5}
+
+Let arr[0] is stored at 1000 then
+arr[1] is stored at 1004
+arr[2] is stored at 1008
+arr[3] is stored at 1012
+arr[4] is stored at 1016
+

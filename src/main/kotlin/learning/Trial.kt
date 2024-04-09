@@ -15,11 +15,12 @@ fun calculateWeather(temp: Int): String {
 }
 
 fun main() {
-    println(calculateWeather(9))
-    val arr: Array<String> = arrayOf("a", "b", "c");
-    arr[0] = "d";
-    arr.forEach { println(it) }
-    println(max(10, 20))
+//    println(calculateWeather(9))
+//    val arr: Array<String> = arrayOf("a", "b", "c");
+//    arr[0] = "d";
+//    arr.forEach { println(it) }
+//    println(max(10, 20))
+    run { for(i in 1..9) println(i) }
 }
 
 fun max(a: Int, b: Int): Int = if (a>b) a else b;
