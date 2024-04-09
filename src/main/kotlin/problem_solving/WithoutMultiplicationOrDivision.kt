@@ -1,5 +1,7 @@
 package com.sample.problem_solving
 
+import java.util.Collections.swap
+
 fun multiplyBy15(n: Int): Int {
     return (n shl 4)-n;
 }
@@ -16,4 +18,5 @@ fun main() {
     println(multiplyBy15(5));
     println(multiplyBy7Point5(10));
     println(multiplyBy15DivideBy16(20));
+
 }
