@@ -11,14 +11,12 @@ fun createNewTask() {
     val taskType = readlnOrNull();
     when(taskType) {
         "1" -> {
-            val taskId: Int = Repository.createTaskId();
-            val task = ImportantTask(taskId,taskName, taskDescription, taskTiming);
-            println(task);
+
+            println("Important Task Created Successfully.");
         }
         "2" -> {
-            val taskId: Int = Repository.createTaskId();
-            val task = NormalTask(taskId,taskName, taskDescription, taskTiming);
-            println(task);
+            createNormalTask(taskName, taskDescription, taskTiming);
+            println("Normal Task Created Successfully.")
         }
         else -> {
             println("Invalid task type");
