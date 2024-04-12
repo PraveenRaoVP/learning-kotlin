@@ -12,7 +12,8 @@ interface Task {
 data class ImportantTask(override val taskId: Int, override val taskHeading: String, override val taskDescription: String, override val timing: String): Task {
     // override toString() method to return taskHeading, taskDescription, and timing
     override fun toString(): String {
-        return "Task Heading: $taskHeading\nTask Description: $taskDescription\nTiming: $timing"
+        return "\n------------------------------------\n***\nTaskId: $taskId\nTask Heading: $taskHeading\nTask Description: $taskDescription\nTiming: $timing\n" +
+                "------------------------------------\n"
     }
 }
 
@@ -20,6 +21,8 @@ data class ImportantTask(override val taskId: Int, override val taskHeading: Str
 data class NormalTask(override val taskId: Int, override val taskHeading: String, override val taskDescription: String, override val timing: String): Task {
     // override toString() method to return taskHeading, taskDescription, and timing
     override fun toString(): String {
-        return "Task Heading: $taskHeading\nTask Description: $taskDescription\nTiming: $timing"
+        return "\n" +
+                "------------------------------------\nTaskId: $taskId\nTask Heading: $taskHeading\nTask Description: $taskDescription\nTiming: $timing\n" +
+                "------------------------------------\n"
     }
 }

@@ -5,6 +5,7 @@ object Repository {
     private var counter: Int = 0;
     private val tasks: MutableMap<Int, Task> = mutableMapOf();
     private val completedTasks: MutableMap<Int, Task> = mutableMapOf();
+
     fun addTask(task: Task) {
         tasks[task.taskId] = task;
     }
@@ -29,8 +30,8 @@ object Repository {
         return tasks[taskId];
     }
 
-    fun deleteTask(taskId: Int) {
-        tasks.remove(taskId);
+    fun deleteTask(taskId: Int): Boolean {
+        return tasks.remove(taskId)!=null;
     }
 
     fun makeTaskImportant(taskId: Int) {
@@ -58,5 +59,4 @@ object Repository {
     fun checkIfTaskCompleted(taskId: Int): Boolean {
         return completedTasks.containsKey(taskId);
     }
-
 }
